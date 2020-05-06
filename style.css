@@ -1,0 +1,54 @@
+
+/* CSS Custom Properties */
+
+body {
+    height: 100vh;
+    height: 100vh; 
+    margin-left: 1in;
+    margin-right: 1in;
+    margin-top: 1in;
+    margin-bottom: 1in;
+    background-color: #10195A;
+    font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+    font-weight: 400;
+    display: flexbox
+}
+
+header {
+    margin: 0;
+    background-color:#303883;
+    text-align: center; 
+}
+
+main {
+    margin: 0;
+    color:#10195A ;
+}
+h1 {
+    color: #e4bd5b;
+}
+
+h2 {
+    color: #e4bd5b; 
+}
+
+h3 {
+    color: #e8ebd5; 
+}
+
+footer {
+    margin: 0;
+    background-color:#303883;
+}
+
+.flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
