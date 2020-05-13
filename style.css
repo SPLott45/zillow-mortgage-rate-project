@@ -4,10 +4,9 @@
 body {
     height: 100vh;
     height: 100vh; 
-    margin-left: 1in;
-    margin-right: 1in;
-    margin-top: 1in;
-    margin-bottom: 1in;
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-top: 0px;
     background-color: #10195A;
     font-family: Camphor,Open Sans,Segoe UI,sans-serif;
     font-weight: 400;
@@ -15,40 +14,142 @@ body {
 }
 
 header {
-    margin: 0;
     background-color:#303883;
-    text-align: center; 
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 main {
     margin: 0;
     color:#10195A ;
 }
+
+
 h1 {
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    font-size: 60px;
     color: #e4bd5b;
 }
 
 h2 {
-    color: #e4bd5b; 
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    color: #e4bd5b;
+    text-indent: 70px
 }
 
 h3 {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    color: #e8ebd5;
+    line-height: normal;
+    text-indent: 125px;
+}
+
+h4 {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    color: #e8ebd5;
+    line-height: normal;
+}
+
+label {
+    text-align: right;
+    width: 10em;
+    margin-right: 1em;
+    color: #e8ebd5; 
+}
+
+input {
+    display: inline-flexbox;
+    text-align: right;
+    width: 10em;
+    margin-right: 1em;
+}
+
+dl {
+    display: inline-flexbox;
+    text-align: left;
+    line-height: normal;
+    text-indent: 125px; 
     color: #e8ebd5; 
 }
 
 footer {
     margin: 0;
     background-color:#303883;
+    text-align: center;
+    color: #e8ebd5
 }
 
-.flex-ctr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
   }
   
-.flex-around {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #a2052c;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #a2052c;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 50px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  button {
+     background-color: #a2052c; 
+     color: #e8ebd5;
+     border-radius: 34px;
+     font-size: 30px;
+     text-align: center
   }

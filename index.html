@@ -6,45 +6,66 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Rate Genie - Mortgage Rate Quotes for Homebuyers</title>
+    <title>Property Genie - Instant & Accurate Property Valuations</title>
 </head>
 
 <body>
     <header>
-        <h1>Rate Genie</h1>
-        <h3>Buying a home soon? Rate Genie can help!</h3>
-        <h3>Get a mortgage rate estimate based on your individual financial profile.</h3>
+        <h1>Property Genie</h1>
+        <h4>Are you thinking about buying a new home or investment property?</h4>
+        <h4>Property Genie can help! We provide instant and accurate property valuations.</h4>
     </header>
 
-    <main>    
-        <h2>Tell us a little about yourself.</h2>
-            <h3>Name</h3>  <input>  <input>
-            <h3>Are you a first-time homebuyer?</h3>  <input>
-
-        <h2>Tell us about the home you've got your eye on, <span>First Name</span>.</h2>
-            <h3>Property Address</h3>  <input type="text">
-            <h3>City</h3>  <input type="text">
-            <h3>State</h3>  <input type="text">
-            <h3>Zip Code</h3>  <input type="text-numbers-only">
-            <h3>Purchase Price</h3>  <input type="integer">
-
-        <h2>Tell us about the loan you want, <span>First Name</span>.</h2>
-            <h3>Down Payment</h3>  <input type="integer"> 
-            <h3>Loan Amount</h3>  <input type="integer">
-            <h3>Loan Term</h3>  <input>
-            <h3>Loan Type</h3>  <input>
-
-        <h2>You're almost finished, <span>First Name</span>. We just need a little more info.</h2>
-            <h3>How's your credit?</h3> <input>
-            <h3>Email Address</h3>  <input>
-            <h3>Phone Number</h3> <input type="text-numbers-only">
-        <div>
-            <button>Get My Rate</button>
+    <main>
+        <form>    
+        <h2>Tell us a little about yourself...</h2>
+    
+            <h3><label>Name</label>  <input id="firstNameInput" type="text" placeholder="First Name" style="text-align:left"> <input type="text" placeholder="Last Name" style="text-align:left"></h3>
+            <h3><label>Are you a first-time homebuyer?</label> <label class="switch"> <input type="checkbox"> <span class="slider round"></span> </label></h3>
+        <br>
+        <h2>Tell us about the property you've got your eye on...</h2>
+    
+            <h3><label>Property Address</label>  <input id= "streetNumInput" type="text" placeholder="Street Number" style="text-align:left"> <input id="streetNameInput" type="text" placeholder="Street Name" style="text-align:left"></h3>
+            <h3><label>City</label> <input id="cityInput" type="text" placeholder="City" style="text-align:left"></h3>
+            <h3><label>State</label> <input id="stateInput" type="text" placeholder="State" style="text-align:left"></h3>
+            <h3><label>Zip Code</label><input id="zipCodeInput" type="text-numbers-only" placeholder="5-Digit Zip Code" style="text-align:left"></h3> 
+        <br>
+        <h2>You're almost finished. We just need a little more info...</h2>
+    
+            <h3><label>E-mail Address</label> <input type="text" placeholder="E-mail Address" style="text-align:left"></h3>
+            <h3><label>Phone Number</label> <input type="text" placeholder="XXXXXXX" style="text-align:left"></h3>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <button type="submit">Get My Property's Value</button>
         </div>
+    </form>
+    <br>
+<div id="Property Valuation Report">
+        <h2>Great news! Here's your Property Valuation Report</h2> 
+
+    <dl>
+            <h3><label><dt>Property Address:</dt></label></h3>
+            <dd id="formatted_street_address"></dd>
+            <dd id="city" id="state"  id="zip_code"></dd>
+            <h3><label><dt>Current Property Value:</dt></label></h3>
+            <dd id="value"></dd>
+
+            <h4><label><dt>The most recent valuation was performed on:</dt></label></h4>
+            <dd id="date"></dd>
+
+            <h4><label><dt>Highest Probable Property Value:</dt></label></h4>
+            <dd id="high"></dd>
+            <h4><label><dt>Lowest Probable Property Value:</dt></label></h4>
+            <dd id="low"></dd>
+    </dl>
+</div>
     </main>
 </body>
 
+<div>
 <footer>
-    © 2019 - 2020 Rate Genie, LLC. All rights reserved.
+    © 2019 - 2020 Property Genie, LLC. All rights reserved.
 </footer>
+</div>
 </html>
