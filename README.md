@@ -4,7 +4,7 @@ A simple application that enables endusers to input basic property information a
 
 ## Getting Started
 
-[Click Here] (https://splott45.github.io/zillow-mortgage-rate-project/) to get started.
+(https://splott45.github.io/zillow-mortgage-rate-project/)
 
 ## Technologies Used
 1. HTML
@@ -17,10 +17,11 @@ A simple application that enables endusers to input basic property information a
 
 ### Wireframe
 
-![Wireframe Mockup] (https://i.imgur.com/PUDCheg.jpg)
+(https://i.imgur.com/PUDCheg.jpg)
 
 ### Completed Project 
-![Deployed Github Page] (https://i.imgur.com/NVeU97Y.jpg)
+
+(https://i.imgur.com/NVeU97Y.jpg)
 
 ## Future Enhancements
 
