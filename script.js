@@ -29,7 +29,6 @@ const $low = $('#low');
     let stateUserInput = $stateInput;
     let zipCodeUserInput = $zipCodeInput;
 
-    let combinedAddress = `${streetNumUserInput + streetNameUserInput},${cityUserInput},${stateUserInput}&${zipCodeUserInput}`;
 
     //Here's your Property Valuation Report//
     let  propertyValReport; 
@@ -39,7 +38,7 @@ const $low = $('#low');
 /*----- cached element references -----*/
 /*----- event listeners -----*/
 console.log("Line 41");
-$('form').on('submit', function() {console.log("submitted")});
+$('form').on('submit', getPropertyValReport)
 
 function getPropertyValReport(event) {
     event.preventDefault();
@@ -55,6 +54,8 @@ function getPropertyValReport(event) {
     cityUserInput = $cityInput.val();
     stateUserInput = $stateInput.val();
     zipCodeUserInput = $zipCodeInput.val();
+
+    let combinedAddress = `${streetNumUserInput + streetNameUserInput},${cityUserInput},${stateUserInput}&${zipCodeUserInput}`;
 
     // //clear the input after user submits form
     // streetNumUserInput = $streetNumInput.val("");
@@ -78,10 +79,10 @@ function getPropertyValReport(event) {
         console.log(error)
 });
 }
-    
+ 
 function render() {
     console.log($city.html(propertyValData.data.address.city))
-    $formatted_street_address.html(data.address.formatted_street_adress);
+    $formatted_street_address.html(propertyValData.data.address.formatted_street_address);
     $city.html(propertyValData.data.address.city);
     $state.html(propertyValData.data.address.state);
     $zip_code.html(propertyValData.data.address.zip_code);
@@ -90,14 +91,3 @@ function render() {
     $high.html(propertyValData.data.valuation.high);
     $low.html(propertyValData.data.valuation.low);
 }
-
-//Hide or Show Property Valuation Report
-
-function getPropertyValReport() {
-    var propertyValReport = document.getElementById("Property Valuation Report");
-    if (propertyValReport.style.display === "none") {
-      propertyValReport.style.display = "block";
-    } else {
-      propertyValReport.style.display = "none";
-    }
-  }
