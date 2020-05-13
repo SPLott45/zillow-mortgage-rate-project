@@ -24,7 +24,6 @@ main {
     color:#10195A ;
 }
 
-
 h1 {
     margin-block-start: 20px;
     margin-block-end: 20px;
@@ -66,7 +65,7 @@ input {
     text-align: right;
     width: 10em;
     margin-right: 1em;
-}
+    }
 
 dl {
     display: inline-flexbox;
